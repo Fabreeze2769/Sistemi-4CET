@@ -1,0 +1,738 @@
+\documentclass[12pt]{book}
+\usepackage[italian]{babel} % a capo in ita
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{cancel}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage {xcolor}
+\usepackage {color}
+\usepackage{commath}
+\graphicspath{ {./Immagini/} }
+\usepackage{float}
+\usepackage{multicol}
+
+
+\huge
+\title{Guida di Analitica}
+\author{3ªCET}
+\date{Anno Scolastico 2022-2023}
+
+
+\begin{document}  
+	\maketitle 
+	\tableofcontents
+	\newpage
+	\chapter{Il piano cartesiano e la retta}
+		\section{Intersezione tra due rette}
+			Consideriamo:
+				\[ y=m_1 x+q_1 \]
+				\[ y=m_2 x+q_2 \]
+			Le rette sono incidenti ( si incontrano in un punto ) se hanno coefficienti angolari diversi . In tal caso per trovare l’intersezione mettiamo a sistema le due equazioni:
+				$$\begin{cases}
+					 y=m_1 x+q_1 \\
+					 y=m_12 x+q_2 
+				\end{cases} $$
+			Tale sistema deve essere risolto rispetto alle variabili x e y coordinate del punto. Si ha risolvendo per confronto:
+				\[ m_1 x+q_1=m_12 x+q_2 \]
+				\[x(m_1-m_2)=q_2-q_1\]
+				\[x=\frac{q_2-q_1}{m_1-m_2}\]
+			Sostituendo nella
+				\[y=m_1\frac{q_2-q_1}{m_1-m_2}+q_1\]
+			Se $m_1=m_2$ e $q_1=q_2$ le rette sono coincidenti;\\
+			Se $m_1=m_2$ e $q_1\neq q_2$ le rette sono parallele;
+	
+		\section{Retta passante per due punti}
+			Determinare la retta passante per due punti dati.\\ \\
+			L'equazione della retta passante per due punti é:
+				\[\frac{x-x_1}{x_2-x_1}=\frac{y-y_1}{y_2-y_1}\]
+			Dove:
+			\[P_1=(x_1,y_1)\land P_2=(x_2,y_2)\]
+			Sviluppando si ha:
+			\[(x-x_1)(y_2-y_1)=(y-y_1)(x_2-x_1)\]
+			\[x(y_2-y_1)-x_1y_2+\cancel{x_1}\cancel{y_1}=
+			y(x_2-x_1)-y_1x_2)+\cancel{y_1}\cancel{x_1}\]
+			\[y=x\frac{y_2-y_1}{x_2-x_1}+
+			\frac{y_1x_2-x_1y_2}{x_2-x_1}\]
+			Attenzione i due punti non devono essere allineati verticalmente. In tal caso l’equazione della retta sarà:
+			\[x=x_1\]
+			
+		\section{Distanza punto retta}
+			Data una retta generica $y=mx+q$ e un punto generico $(x_0,y_0)$ si ha:
+			Equazione della retta in forma implicita:
+			\[mx_0-y_0+q=0\]
+			Da cui:
+			\[d=\frac{\abs{mx_0-y_0+q}}{\sqrt{m^2+1}}\]
+			Se $d=0$ il punto appartiene alla retta.
+		
+		\section{Distanza punto punto}
+			Dati due punti generici $P_1(x_1,y_1)$ e $P_2(x_2,y_2)$ si ha:
+			\[d=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}\]
+		\section{Retta perpendicolare e retta parallela a retta data passanti per un punto dato}
+			Data una generica retta ed un generico punto non appartenente ad essa, determinare la retta parallela e perpendicolare alla retta data passante per detto punto.
+			Sia l’equazione della generica retta:
+			\[y=mx+q\]
+			Ed $x_0,y_0$ le coordinate del generico punto $p_0$,
+			affinché il punto non appartenga alla retta quest'ultimo dev'essere:
+			\[y_0\neq mx_0+q\]
+			Cioè, sostituendo $x_0,y_0$ nell'equazione della retta non deve risultare un'identità.
+			L'equazione del generico fascio proprio di rette per $p_0$è:
+			\[y-y_0=m_p(x-x_0)\]
+			\[y=m_px+y_0-m_px_0\]
+			Affinché la retta sia parallela alla retta data deve essere:
+			\[m_p=m\land q_p=y_0-mx_0\]
+			Analogamente si ha:
+			\[y=m_{pp}x+y_0-m_{pp}x_0\]
+			Affinché la retta sia perpendicolare alla retta data deve essere:
+			\[m_{pp}=-\frac{1}{m}\]
+			\[q_{pp}=y_0+\frac{1}{m}x_0\]
+			Se $m=0$ la retta perpendicolare sarà $x=x_0$
+			\newpage
+			
+		\section{Fascio di rette improprio}
+			Rappresentare il generico fascio di rette improprio con coefficiente angolare dato.
+			Sia $m$ il coefficiente angolare dato.
+			L'equazione del fascio improprio è:
+			\[y=mx+q\]
+			Dove $m$ è fisso e $q$ varia. Al variare di $q$ si ottengono rette parallele fra loro.
+		
+		\section{Fascio di rette proprio}
+			Rappresentare il generico fascio di rette proprio il cui centro è nel punto $P_0(x_0,y_0)$ is ha:
+			\[y-y_0=m(x-x_0)\]
+			\[y=mx+y_0-mx_0\]
+			Dove $m$ varia teoricamente tra $-\infty$ e $+\infty$
+			\newpage
+			
+		\section{Bisettrici tra due rette}
+			Siano $y=m_1x+q_1$ e $y=m_2x+q_2$ due rette generiche. Le due bisettrici sono il luogo di punti equidistanti dalla retta data. Quindi si ha:
+			\[\frac{\abs{m_1x+q_1-y}}{\sqrt{m_1^2+1}}=
+			\frac{\abs{m_2x+q_2-y}}{\sqrt{m_2^2+1}}\]
+			Sviluppando si ha:
+			\[\frac{m_1x+q_1-y}{\sqrt{m_1^2+1}}=
+			\frac{m_2x+q_2-y}{\sqrt{m_2^2+1}}\]
+			Ovvero, nel primo caso:
+			\[x\cdot\left(\frac{m_1}{\sqrt{m_1^2+1}}
+			-\frac{m_2}{\sqrt{m_2^2+1}}\right)
+			+\frac{q_1}{\sqrt{m_1^2+1}}
+			-\frac{q_2}{\sqrt{m_2^2+1}}
+			=y\cdot\left(\frac{1}{\sqrt{m_1^2+1}}
+			-\frac{1}{\sqrt{m_2^2+1}}
+			\right)\]
+			\[x\cdot\frac{m_1\cdot\sqrt{m_2^2+1}-m_2\cdot\sqrt{m_1^2+1}}{\sqrt{\left(m_1^2+1\right)\cdot\left(m_2^2+1\right)}}
+			+\frac{q_1\cdot\sqrt{m_2^2+1}-q_2\cdot\sqrt{m_1^2+1}}
+			{\sqrt{\left(m_1^2\right)\cdot\left(m_2^2+1\right)}}=
+			y\cdot\frac{\sqrt{m_2^2+1}-\sqrt{m_1^2+1}}
+			{\sqrt{\left(m_2^2+1\right)\cdot\left(m_2^2+1\right)}}\]
+			\[y=x\cdot\frac{m_1\cdot\sqrt{m_2^2+1}-m_2\cdot\sqrt{m_1^2+1}}
+			{\sqrt{m_1^2+1}-\sqrt{m_2^2+1}}
+			+\frac{q_1\cdot\sqrt{m_2^2+1}-q_2\cdot\sqrt{m_1^2+1}}
+			{\sqrt{m_2^2+1}-\sqrt{m_1^2+1}}\]
+			E nel secondo caso:
+			\[x\cdot\left(\frac{m_1}{\sqrt{m_1^2+1}}
+			+\frac{m_2}{\sqrt{m_2^2+1}}\right)
+			+\frac{q_1}{\sqrt{m_1^2}}
+			+\frac{q_2}{\sqrt{m_2^2}}
+			=\frac{y}{\sqrt{m_2^2}}
+			+\frac{y}{\sqrt{m_1^2}}
+			\]	
+			\[x\cdot\frac{m_1\cdot\sqrt{m_1^2+1}+m_2\cdot\sqrt{m_1^2+1}}
+			{\sqrt{\left(m_1^2+1\right)+\left(m_2^2+1\right)}}
+			+\frac{q_1\cdot\sqrt{m_2^2+1}+q_2\sqrt{m_1^2+1}}
+			{\sqrt{m_1^2+1}+\sqrt{m_2^2+1}}
+			=y\cdot\left(\frac{\sqrt{m_1^2+1}+\sqrt{m_2^2+1}}
+			{\sqrt{\left(m_1^2+1\right)+\left(m_2^2+1\right)}}\right)
+			\]
+			\[y=x\cdot\frac{m_1\cdot\sqrt{m_1^2+1}+m_2\cdot\sqrt{m_1^2+1}}
+			{\sqrt{m_1^2+1}+\sqrt{m_2^2+1}}
+			+\frac{q_1\cdot\sqrt{m_2^2+1}+q_2\cdot\sqrt{m_1^2+1}}
+			{\sqrt{m_1^2+1}+\sqrt{m_2^2+1}}
+			\]
+			
+	\chapter{La circonferenza}
+			\section{Intersezione tra due circonferenze}
+			Determinare i punti di intersezione di due circonferenze.\\
+			Date le equazioni di due circonferenze generiche:
+			\[x^2+y^2+a_1x+b_1y+c_1=0\]
+			\[x^2+y^2+a_2x+b_2y+c_2=0\]
+			Per ottenere le intersezioni occorre mettere tali equazioni a sistema. Si ottiene un sistema nelle incognite $x$ e $y$:
+			$$\begin{cases}
+			x^2+y^2+a_1x+b_1y+c_1=0\\
+			x^2+y^2+a_2x+b_1y+c_2=0
+			\end{cases}$$
+			Eliminando i termini di secondo grado sottraendo la seconda equazione alla prima si ottiene:
+			$$\begin{cases}
+				\left(a_1-a_2\right)\cdot x+\left(b_1-b_2\right)\cdot y+c_1-c_2=0\\
+				x^2+y^2+a_1x+b_1y+c_1=0
+			\end{cases}$$
+			Ricaviamo $x$ supponendo $a_1-a_2\neq0$:
+			$$\begin{cases}
+				x=\frac{c_2-c_1+y\cdot\left(b_2-b_1\right)}
+				{a_1-a_2}\\
+				\left[\frac{c_2-c_1+y\cdot\left(b_2-b_1\right)}
+				{a_1-a_2}\right]^2
+				+y^2+a_1\cdot\frac{c_2+c_1+y\cdot(b_2-b_1)}
+				{a_1-a_2}
+				+b_1y+c_1=0
+			\end{cases}$$
+			Si ottiene così:
+			$$\begin{cases}
+				x=\frac{c_2-c_1+y\cdot\left(b_2-b_1\right)}
+				{a_1-a_2}\\
+				\frac{\left(c_2-c_1\right)^2+y^2\cdot\left(b_2-b_1\right)^2+2\cdot\left(c_2-c_1\right)\cdot y\cdot\left(b_2-b_1\right)}
+				{\left(a_1-a_2\right)^2}
+				+y^2+a_1\cdot\frac{c_2-c_1+y\cdot\left(b_2-b_1\right)}
+				{a_1-a_2}
+				+b_1y+c_1=0
+			\end{cases}$$
+			$$\begin{cases}
+				x=\frac{c_2-c_1+y\cdot\left(b_2-b_1\right)}
+				{a_1-a_2}\\
+				y^2\cdot\left[\frac{\left(b_2-b_1\right)^2}
+				{\left(a_1-a_2\right)^2}+1\right]
+				+y\cdot\left[\frac{2\cdot\left(c_2-c_1\right)\cdot\left(b_2-b_1\right)}
+				{\left(a_1-a_2\right)}
+				+\frac{\left(b_2-b_1\right)}
+				{\left(a_1-a_2\right)}\cdot a_1+b_1\right]
+				+\frac{\left(c_2-c_1\right)^2}
+				{\left(a_1-a_2\right)^2}
+				+a_1\cdot\frac{\left(c_2-c_1\right)}
+				{\left(a_1-a_2\right)}+c_1=0
+			\end{cases}$$
+			Dopo aver risolto la seconda equazione rispetto ad $y$ si sostituiscono i valori trovati (se esistenti) nella prima equazione, determinando così i corrispondenti valori di $x$.
+			Ricavando $y$ si ottiene (avendo $b_1-b_2\neq0$):
+			$$\begin{cases}
+				y=\frac{c_2-c_1+\left(a_2-a_1\right)\cdot x}
+				{b_1-b_2}\\
+				x^2\cdot\left[\frac{\left(c_2-c_1\right)+\left(a_2-a_1\right)\cdot x}
+				{b_1-b_2}\right]^2
+				+a_1x+b_1\cdot\frac{\left(c_2-c_1\right)+\left(a_2-a_1\right)\cdot x}
+				{b_1-b_2}+c_1=0
+			\end{cases}$$
+			$$\begin{cases}
+				y=\frac{c_2-c_1+\left(a_2-a_1\right)\cdot x}
+				{b_1-b_2}\\
+				x^2\cdot\frac{\left(c_2-c_1\right)^2+\left(a_2-a_1\right)^2\cdot x^2+2\cdot\left(c_2-c_1\right)\cdot\left(a_2-a_1\right)\cdot x}
+				{\left(b_1-b_2\right)^2}
+				+a_1x+b_1\cdot\frac{\left(c_2-c_1\right)+\left(a_2-a_1\right)\cdot x}
+				{b_1-b_2}+c_1=0
+			\end{cases}$$
+			$$\begin{cases}
+				y=\frac{c_2-c_1+\left(a_2-a_1\right)\cdot x}
+				{b_1-b_2}\\
+				x^2\cdot\left[1+\frac{\left(a_2-a_1\right)^2}
+				{\left(b_2-b_1\right)^2}\right]
+				+x\cdot\left[\frac{2\cdot\left(c_2-c_1\right)\cdot\left(a_2-a_1\right)\cdot x}
+				{\left(b_1-b_2\right)^2}
+				+a_1+\frac{\left(a_2-a_1\right)}
+				{\left(b_1-b_2\right)}\cdot b_1\right]
+				+\frac{\left(c_2-c_1\right)}
+				{\left(b_1-b_2\right)}+b_1\cdot
+				\frac{\left(c_2-c_1\right)}
+				{\left(b_1-b_2\right)} +c_1=0
+			\end{cases}$$
+			Dopo aver risolto la seconda equazione rispetto ad $x$ si sostituiscono i valori trovati (se esistono) nella prima equazione, determinando così i corrispondenti valori di $y$.
+			
+			\section{Retta tangente ad una circonferenza passante per un punto assegnato}
+			Data una generica circonferenza $x^2+y^2+ax+by+c=0$ determinare la retta tangente passante per il punto:
+			\[P(x_0,y_0)\]
+			Il problema consiste nel trovare tra tutte le rette passanti per il punto $P$ quella tangente alla circonferenza , questa situazione si verifica quando la distanza tra il centro del cerchio e la retta considerata è uguale al raggio.
+			\\Innanzitutto ricaviamo il fascio di rette per $P$
+			\[y-y_0=m(x-x_0)\]
+			\[y-y_0=mx-mx_0\]
+			\[mx-y+y_0-mx_0=0\]
+			Pongo la distanza tra $r$ e $P$ uguale al raggio:
+			\[d(r,p)=raggio\]
+			Da cui ottengo:
+			\[\frac{\abs{m\left(-\frac{a}{2}\right)-\left(-\frac{b}{2}\right)+y_0-mx_0}}{\sqrt{m^2+1}}
+			=\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}\]
+			Risolvo:
+			\[\abs{-\frac{ma}{2}+\frac{b}{2}+y_0-mx_0}^2=
+			\left(\frac{a^2}{4}+\frac{b^2}{4}-c\right)\cdot\left(m^2+1\right)\]
+			Per eseguire il quadrato, tratto il quadrinomio come se fosse un binomio dove $A$ e $B$ rappresentano rispettivamente:
+			\[A=\left(\frac{b}{2}-\frac{ma}{2}\right)\]
+			\[B=\left(y_0-mx_0\right)\]
+			Si ha:
+			\[\left(A+B\right)^2=A^2+B^2+2AB\]
+			Quindi:
+			\[\left[\left(\frac{b}{2}-\frac{ma}{2}\right)+\left(y_0-mx_0\right)\right]^2=\left(\frac{a^2}{4}+\frac{b^2}{4}-c\right)\cdot\left(m^2+1\right)\]
+			\[\left(\frac{b^2}{4}+\frac{m^2a^2}{4}-\frac{mab}{2}\right)+\left(y_0^2+m^2x_0^2+2mx_0y_0\right)+2\left(\frac{b}{2}-\frac{-ma}{2}\right)\cdot\left(y_0-mx_0\right)=\left(\frac{a^2}{4}+\frac{b^2}{4}-c\right)\cdot\left(m^2+1\right)\]
+			Sviluppando si ottiene:
+			\[\frac{b^2}{4}+\frac{m^2a^2}{4}-\frac{mab}{2}+y_0^2+m^2x_0^2-2mx_0y_0+by_0-mbx_0-may_0+m^2ax_0=\frac{a^2}{4}\frac{b^2}{4}-c+m^2\left(\frac{a^2}{4}+\frac{b^2}{4}-c\right)\]
+			Si tratta di una equazione di secondo grado nell'incognita $m$; quindi ordino rispetto ad $m$ ed ottengo:
+			\[m^2\left(\frac{c-b^2}{4}+x_0^2+ax_0\right)+m\left(-\frac{ab}{2}-2x_0y_0-bx_0-ay_0\right)+y_0^2+by_0+c-\frac{a^2}{4}=0\]
+			I due valori di $m$ che si ottengono dalla soluzione di detta equazione costituiscono (se esistono) i coefficienti angolari delle rette tangenti alla circonferenza.
+			\\Inoltre si ha:
+			\[y=mx-mx_0+y_0\]
+			Da cui:
+			\[q=y_0-mx_0\]
+			
+		
+			\section{Circonferenza con centro in P e raggio dato}
+			Determinare la circonferenza di raggio $r$ con centro in $P(x_0;y_0)$.
+			L'equazione della circonferenza sarà:
+			\[\left(x-x_0\right)^2+\left(y-y_0\right)^2=r^2\]
+			Sviluppando e ordinando:
+			\[x^2+x_0^2-2xx_0+y^2+y_0^2-2yy_0=r^2\]
+			\[x^2+y^2-2xx_0-2yy_0+x_0^2+y_0^2=r^2\]
+			Si ha che:
+			\[a=-2x_0\]
+			\[b=-2y_0\]
+			\[c=x_0^2+y_0^2-r^2\]
+			
+		
+			\section{Circonferenza per 3 punti}
+			Determinare la circonferenza passante per tre punti:\\ $P_1(x_1;y_1)$ $P_2(x_2;y_2)$ $P_3(x_3;y_3)$\\
+			L'equazione generica della circonferenza è:
+			\[x^2+y^2+ax+by+c=0\]
+			Impostiamo il passaggio per i punti $P_1$, $P_2$ e $P_3$:
+			\[x^2_1+y^2_1+ax_1+by_1+c=0\]
+			\[x^2_2+y^2_2+ax_2+by_2+c=0\]
+			\[x^2_3+y^2_3+ax_3+by_3+c=0\]
+			Si ottiene un sistema di tre equazioni nelle incognite $a$, $b$ e $c$.\\ Ordiniamo il sistema:
+			\[ax_1+by_1+c=-x^2_1-y^2_1\]
+			\[ax_2+by_2+c=-x^2_2-y^2_2\]
+			\[ax_3+by_3+c=-x^2_3-y^2_3\]
+			Matricialmente si ottiene:
+			\[A=\begin{bmatrix}
+				x_1 & y_1 & 1 \\
+				x_2 & y_2 & 1 \\
+				x_3 & y_3 & 1 
+			\end{bmatrix}
+			\quad
+			B=\begin{bmatrix}
+				-x_1^2	& -y_1^2 \\
+				-x_2^2  & -y_2^2 \\
+				-x_3^2  & -y_3^2
+			\end{bmatrix}
+			\quad
+			X=\begin{bmatrix}
+				a\\
+				b\\
+				c
+			\end{bmatrix}\]
+		
+			Occorre verificare che i tre punti non siano allineati.\\
+			La condizione di allineamento è:
+			\[detA=0\]
+			Cioè:
+			\[det\begin{bmatrix}
+				x_1 & y_1 & 1\\
+				x_2 & y_2 & 1\\
+				x_3 & y_3 & 1
+			\end{bmatrix}=0\]
+		\section{Fascio di circonferenze}
+			Rappresentare il fascio di circonferenze con centro nel punto $P_0(x_0;y_0)$.\\
+			L'equazione generica è:
+			\[x^2+y^2+ax+by+c=0\]
+			Il centro della circonferenza deve essere nel punto assegnato $P_0$.\\ Le generiche coordinate della
+			circonferenza sono:
+			\[C\left(-\frac{a}{2};-\frac{b}{2}\right)\]
+			Dobbiamo quindi imporre:
+			\[-\frac{a}{2}=x_0\quad -\frac{b}{2}=y_0\]
+			Da cui si ricava:
+			\[a=-2x_0\quad b=-2y_0\]
+			Il raggio $r$ risulta:
+			\[r=\sqrt{\frac{a^2}{4}+\frac{b^2}{4}-c}
+			=\sqrt{\frac{4x_0^2}{4}+\frac{4y_0^2}{4}-c}
+			=\sqrt{x_0^2+y_0^2-c}\] 
+			Deve essere:
+			\[x_0^2+y_0^2-c0\ge0\]
+			Quindi:
+			\[c\le x_0^2+y_0^2\]
+			Al variare di $c$, tenendo conto delle condizioni determinare, si ottengono circonferenze concentriche con centro nel punto assegnato $P_0$.
+	\chapter{La Parabola}
+			\section{Parabola di vertice V passante per P}
+			Determinare la parabola di vertice $V(x_1;y_1)$ e passante per il punto $P(x_1;y_1)$.\\
+			L'equazione della parabola generica è:
+			\[y=ax^2+bx+c\]
+			Imponiamo ora il passaggio per $P$ e per $V$.Imponiamo inoltre che $V$ sia il vertice di tale parabola.
+			$$\begin{cases}
+				y_1=ax_1^2+bx_1+c\\
+				-\frac{b}{2a}=x_0\\
+				y_0=ax_0^2+bx_0+c\\
+			\end{cases}$$
+			Matricialmente si ha $A\cdot x=b$, dove:
+			\[A=\begin{Bmatrix}
+				x_1^2 & x_1& 1\\
+				2x_0 & 1 & 0\\
+				x_0^2 & x_0 &1
+			\end{Bmatrix}
+			\quad
+			B=\begin{bmatrix}
+				y_1 \\ 0 \\y_0
+			\end{bmatrix}
+			\]
+			
+			\section{Parabola conoscendo fuoco e direttrice}
+			Data l’equazione della direttrice $y=a$ e le coordinate del fuoco $F(x_f;y_f)$, determinare l'equazione della parabola.\\
+			Sia $P(x;y)$ un generico punto del piano, per trovare l'equazione della parabola bisogna imporre che sia equidistante dal fuoco e dalla direttrice.\\
+			Scriviamo l'equazione della direttrice in modo implicito: $y_a=0$. Quindi otteniamo:
+			\[d(P,d)=\frac{\abs{y_a}}{1}=\abs{y_a}\]
+			\[d(P,d)=\sqrt{\left(x-x_f\right)^2+\left(y-y_f\right)^2}\]
+			Ora imponiamo cje le due distanze siano uguali
+			\[\abs{y-a}=\sqrt{\left(x-x_f\right)^2+\left(y-y_f\right)^2}\]
+			Ora sviluppiamo i calcoli per ottenere l'equazione della parabola:
+			\[\left(y-a\right)^2=\left(x-x_f\right)^2+\left(y-y_f\right)^2\]
+			\[\cancel{y^2}-2\cdot a\cdot y+a^2=x^2-2\cdot x \cdot x_f + x_f^2+\cancel{y^2}-2\cdot y \cdot y_f+y_f^2\]
+			\[2yy_f-2ay=x^2-2xx_f+x_f^2+y_f^2-a^2\]
+			\[2y\left(y_f-a\right)=x^2-2xx_f+x_f^2+y_f^2-a^2\]
+			\[y=x^2\cdot\frac{1}{2\left(y_f-a\right)}-x\cdot\frac{\cancel{2}x_f}{\cancel{2}\left(y_f-a\right)}+\frac{x_f^2+y_f^2-a^2}{2\cdot\left(y_f-a\right)}\]
+			
+			\section{Retta tangente ad una parabola per P}
+			Data una generica parabola determinare la retta tangente passante per un punto dato $P(x_0;y_0)$.
+			L'equazione generica della parabola è:
+			\[y=ax^2+bx+c\]
+			Determiniamo ora il fascio di rette proprio passante per $P$:
+			\[y-y_0=m(x-x_0)\]
+			\[y=mx+y_0-mx_0\]
+			Per determinare la retta tangente occorre mettere a sistema l'equazione della parabola e quella del fascio, ed imporre la condizione di tangenza, ovvero $\Delta$ pari a zero.
+			$\begin{cases}
+				y=ax^2+bx+c\\
+				y=mx+y_0-mx_0
+			\end{cases}$
+			\\Risolvendo per confronto si ottiene:
+			\[ax^2+bx+c=mx+y_0-mx_0\]
+			Ordinando si ottiene l'equazione risolvente, di secondo grado:
+			\[ax^2+x(b-m)+c+mx_0-y_0=0\]
+			Imponiamo la condizione di tangenza $\Delta=0$, poichè il punto di contatto tra le due curve dev'essere unico.
+			Quindi otteniamo:
+			\[(b-m)^2-4a(c+mx_0-y_0)=0\]
+			\[b^2+m^2-2bm-4ac-4amx_0+4ay_0=0\]
+			Ordinando l'equazione rispetto ad $m$:
+			\[m^2+m(-2b-4ax_0)+4ay_0-4ac+b^2=0\]
+			Risolvendo tale equazione si determinano (se le tangenti esistono) i valori di $m_1$ ed $m_2$.
+			\\Si determina quindi:
+			\[q_1=y_0-m_1x_0\]
+			\[q_2=y_0-m_2x_0\]
+			
+			\section{Parabola passante per 3 punti assegnati}
+			Determinare la parabola passante per tre punti:\\ $P_1(x_1;y_1)$ $P_2(x_2;y_2)$ $P_3(x_3;y_3)$\\
+			L'equazione generica della parabola è:
+			\[y=ax^2+bx+c\]
+			Impostiamo il passaggio per i punti $P_1$, $P_2$ e $P_3$:
+			\[y_1=ax_1^2+bx_1+c\]
+			\[y_2=ax_2^2+bx_2+c\]
+			\[y_3=ax_3^2+bx_3+c\]
+			Si ottiene un sistema di tre equazioni nelle incognite $a$, $b$ e $c$.\\ Ordiniamo il sistema:
+			\[ax_1^2+by_1+c=y_1\]
+			\[ax_2^2+by_2+c=y_2\]
+			\[ax_3^2+by_3+c=y_3\]
+			Matricialmente si ottiene:
+			\[A=\begin{bmatrix}
+				x_1^2 & x_1 & 1 \\
+				x_2^2 & x_2 & 1 \\
+				x_3^2 & x_3 & 1 
+			\end{bmatrix}
+			\quad
+			B=\begin{bmatrix}
+				y_1 \\
+				y_2 \\
+				y_3
+			\end{bmatrix}
+			\quad
+			X=\begin{bmatrix}
+				a\\
+				b\\
+				c
+			\end{bmatrix}\]
+			\[Ax=b\]
+			Occorre verificare che i tre punti non siano allineati.\\
+			La condizione di allineamento è:
+			\[det\begin{bmatrix}
+				x_1 & y_1 & 1\\
+				x_2 & y_2 & 1\\
+				x_3 & y_3 & 1
+			\end{bmatrix}=0\]
+			
+			\section{Intersezione tra una retta ed una parabola}
+			Data la parabola, di equazione generica:
+			\[y=ax^2+bx+c\]
+			E la retta generica:
+			\[y=mx+q\]
+			Determinare i punti di intersezione tra le due curve.\\
+			\\Per determinare i punti di intersezione (se esistono) occorre mettere a sistema le equazioni delle due curve:
+			\[\begin{cases}
+				y=ax^2+bx+c\\
+				y=mx+q
+			\end{cases}\]
+			Risolviamo per confronto:
+			\[\begin{cases}
+				y=ax^2+bx+c\\
+				ax^2+bx+c=mx+q
+			\end{cases}\]
+			\\Risolvendo la seconda equazioni si ottiene:
+			\[ax^2+x(b-m)+c-q=0\quad\quad [1] \]
+			Le soluzioni $x_1$ ed $x_2$ sostituite nella prima equazione forniscono le coordinate di $y$:
+			\[y_1=mx_1+q\]
+			\[y_2=mx_2+q\]
+			Le due curve si intersecano se l'equazione [1] ha soluzioni, ovvero se il suo discriminante è maggiore o uguale a zero:
+			\[(b-m)^2-4a(c-q)\geq0\]
+			In particolare la retta e la parabola sono tangenti qualora i due punti di intersezione coincidono, ovvero il discriminante è nullo.
+			
+			\section{Intersezione tra due parabole}
+			Siano $y=a_1x^2+b_1x+c_1=0$ e $y=a_2x^2+b_2x+c_2=0$ le generiche equazioni delle parabole.
+			\\Per determinare i punti di intersezione occorre mettere a sistema le due equazioni:
+				\[\begin{cases}
+					y=a_1x^2+b_1x+c_1=0\\
+					y=a_2x^2+b_2x+c_2=0
+				\end{cases}\]
+			Risolvendo per confronto si ottiene:
+			\[a_1x^2+b_1x+c_1=a_2x^2+b_2x+c_2\]
+			Riordiniamo rispetto alla variabile $x$:
+			\[x^2\cdot \left(a_1-a_2\right)+x\cdot \left(b_1-b_2\right)+c_1-c_2=0\]
+			Le soluzioni di detta equazione (se esistono, ovvero se il suo delta $\Delta$ è maggiore o uguale a 0) sostituiscono le coordinate $x_1$ e $x_2$ dei punti di intersezione $P_1$ e $P_2$. Per determinare $y_1$ e $y_2$ occorre sostituire $x_1$ o $x_2$ rispettivamente nella prima o nella seconda parabola.
+			\[y_1=a_1x^2+b_1x+c_1\]  \[y_2=a_2x^2+b_2x+c_2=0\]
+			Se l'equazione di secondo grado non fornisce soluzioni, significa che le due parabole non hanno punti in comune.
+			
+			\section{Parabola conoscendo vertice e direttrice}
+			Determinare l'equazione della parabola avente vertice $V(x_V;y_V)$ e direttrice di equazione $y=a$.
+			\\La parabola è il luogo geometrico dei punti di un piano equidistanti da un punto fisso $F$ (detto fuoco) e da una retta data $d$ (detta direttrice).
+			\\Il punto $V$ (vertice) è il punto medio del segmento $\overline{FK}$, pertanto il fuoco $F$ ed il vertice $V$ hanno ascissa uguale, infatti:
+			\[x_F=x_V\]
+			Mentre le ordinate sono legate dalla seguente relazione:
+			\[y_F=\frac{y_F+y_K}{2}=\frac{y_F+a}{2}\]
+			Da cui ricaviamo:
+			\[2y_V=y_F+a\rightarrow y_F=2y_V-a\]
+			Conosciamo ora l'equazione della direttrice e le coordinate del fuoco $F$; facendo quindi riferimento al problema precedente, possiamo determinare i coefficienti $a, b, c$
+			
+			\section{Parabola conoscendo vertice e fuoco}
+			Determinare l'equazione della parabola con asse $\parallel$ all'asse delle ordinate di vertice $V(x_V;y_V)$ e il fuoco $F(x_f;y_f)$.
+			Ricordando che il vertice è il punto medio del segmento $FK$ possiamo determinare l'espressione della direttrice:
+			\[\frac{y_k+y_f}{2}=y_V\]
+			\[y_k+y_f=2y_V\]
+			\[y_k=2y_V-y_f=a\]
+			L'equazione della direttrice risulta quindi:
+			\[y=a\]
+			Conosciamo ora l'equazione della direttrice e le coordinate del fuoco $F$; facendo quindi riferimento al problema precedente possiamo determinare i coefficienti $a, b, c$:
+			\[a=\frac{1}{2\left(y_f-a\right) }\quad
+			b=\frac{x_f}{\left(y_f-a\right)}
+			c=\frac{x_f^2+y_f^2-a^2}{2\left(y_f-a\right)}\]
+	\chapter{L'Ellisse}
+			\section{Ellisse per due punti}
+			
+			L'equazione generica di un'ellisse con centro nell'origine degli assi è la seguente:
+			\[\frac{x^2}{a^2}=\frac{y^2}{b^2}=1\]
+			Imponendo l'appartenenza di $P_1$ e $P_2$ all'ellisse otteniamo:
+			\[\begin{cases}
+				\frac{x^2_1}{a^2}=\frac{y^2_1}{b^2}=1\\
+				\frac{x^2_2}{a^2}=\frac{y^2_2}{b^2}=1
+			\end{cases}\]
+			Si ottiene un sistema in due equazioni e due incognite (i parametri $a$ e $b$).
+			Risolvendo per confronto si avrà:
+			\begin{multicols}{2}
+			\noindent
+			$\begin{cases}
+				b^2x^2_1+a^2y^2_1=a^2b^2\\
+				b^2x^2_2+a^2y^2_2=a^2b^2
+			\end{cases}$\\\\
+			$\begin{cases}
+				b^2x^2_1+a^2y^2_1=b^2x^2_2+a^2y^2_2\\
+				b^2x^2_1+a^2y^2_1=a^2b^2
+			\end{cases}$\\\\
+			$\begin{cases}
+				b^2\cdot\left(x_1^2-x_2^2\right)=a^2\cdot\left(y_2^2-Y_1^2\right)\\
+				b^2x_1^2+a^2y_1^2=a^2b^2
+			\end{cases}$\\\\
+			$\begin{cases}
+				b^2=a^2\cdot\frac{y_2^2-y_1^2}{x_1^2-x_2^2}\\
+				a^2\cdot\frac{y_2^2-y_1^2}{x_1^2-x_2^2}\cdot x_1^2+a^2y_1^2=a^2b^2
+			\end{cases}$\\\\
+			$\begin{cases}
+				b^2=a^2\frac{y_2^2-y_1^2}{x_1^2-x_2^2}\\
+				\left[y_1^2+x_1^2\cdot\frac{y_2^2-y_1^2}{x_1^2-x_2^2}\right]\cdot \cancel{a^2} = \cancel{a^2}b^2
+			\end{cases}$\\\\
+			$\begin{cases}
+				a^2=b^2\frac{y_2^2-y_1^2}{x_1^2-x_2^2}\\
+				b^2=y_1^2+x_1^2\frac{y_2^2-y_1^2}{x_1^2-x_2^2}
+			\end{cases}$\\\\
+			$\begin{cases}
+				a^2=b^2\frac{y_2^2-y_1^2}{x_1^2-x_2^2}\\
+				b^2=\frac{y_1^2\left(x_1^2-x_2^2\right)+x_1^2y_2^2-x_1^2y_1^2}{x_1^2-x_2^2}
+			\end{cases}$\\\\
+			$\begin{cases}
+				a^2=\frac{y_1^2\left(x_1^2-x_2^2\right)+x_1^2\left(y_2^2-y_1^2\right)}{x_1^2-x_2^2}\cdot \frac{x_1^2-x_2^2}{y_2^2-y_1^2}\\
+				b^2=\frac{\cancel{y_1^2x_1^2}-y_1^2x_2^2+y_1^2x_2^2-\cancel{y_1^2x_1^2}}{x_1^2-x_2^2}=\frac{x_1^2y_2^2-y_1^2x_2^2}{x_1^2-x_2^2}
+			\end{cases}$\\\\
+			\end{multicols}
+			Ed il risultato finale è:
+			\[\begin{cases}
+				a^2=\frac{x_1^2y_2^2-y_1^2x_2^2}{y_2^2-y_1^2}\\
+				b^2=\frac{x_1^2y_2^2-y_1^2x_2^2}{x_1^2-x_2^2}
+			\end{cases}\]
+			\section{Intersezione tra ellisse e retta}
+			Determinare l'intersezione tra l'ellisse e la retta.\\
+			Occorre mettere a sistema le due equazioni.
+			\[\begin{cases}
+				\frac{x^2}{a^2}+\frac{y^2}{b^2}=1\\
+				y=mx+q
+			\end{cases}\]
+			Risolviamo il sistema per sostituzione:
+			\[\frac{x^2}{a^2}+\frac{\left(mx+q\right)^2}{b^2}=1\]
+			\[b^2x^2+a^2\left(m^2x^2+q^2+2mqx\right)=a^2b^2\]
+			\[b^2x^2+a^2+a^2m^2x^2+a^2q^2+2a^2mqx=a^2b^2\]
+			\[x^2\left(b^2+a^2m^2\right)2a^2mqx+a^2q^2-a^2b^2=0\]
+			Risolvendo l'equazione di secondo grado si determinano (se esistenti) i valori $x_1$ e $x_2$ delle coordinate dei punti di intersezione. Per determinare le coordinate $y$ basta sostituire $x_1$ e $x_2$ nell'equazione della retta:
+			\[y_1=mx_1+q\]
+			\[y_2=mx_2+q\]
+			
+	\chapter{L'iperbole}
+			\section{Iperbole passante per due punti}
+			Determinare l'equazione dell'iperbole (fuochi sull'asse $x$) passante per i punti:
+			\[P_1(x_1,y_1)\quad e \quad P_2(x_2,y_2)\]
+			L'equazione generica dell'iperbole è:
+			\[\frac{x^2}{a^2}-\frac{y^2}{b^2}=1\]
+			Imponiamo il passaggio dell'iperbole per i due punti ottenendo un sistema con due equazioni e due incognite:
+			\[\begin{cases}
+				\frac{x_0^2}{a^2}-\frac{y_0^2}{b^2}=1\\
+				\frac{x_1^2}{a^2}-\frac{y_1^2}{b^2}=1
+			\end{cases}\]
+			Risolviamo adesso rispetto alle incognite $\frac{1}{a^2}$ e $\frac{1}{b^2}$. Risolviamo il sistema con il metodo di Cramer. In forma matriciale si ottiene:
+			\[A=\begin{bmatrix}
+				x_0^2 & -y_0^2\\
+				x_1^2&-y_1^2
+			\end{bmatrix}\quad
+			B=\begin{bmatrix}
+				1\\1
+			\end{bmatrix}\quad
+			x=\begin{bmatrix}
+				\frac{1}{a^2}\\
+				\frac{1}{b^2}
+			\end{bmatrix}\]
+			Determino:
+			\[detA=-x_0^2\cdot y_1^2-\left(-x_1^2\cdot y_0^2\right)= x_1^2\cdot y_0^2-x_0^2\cdot y_1^2\]
+			\[det\Delta_{\frac{1}{a^2}}=\begin{bmatrix}1&-y_0^2\\1&-y_1^2\end{bmatrix}=-y_1^2-\left(-y_0^2\right)=y_0^2-y_1^2\]
+			\[det\Delta_{\frac{1}{b^2}}=\begin{bmatrix}x_0^2&1\\x_1^2&1\end{bmatrix}=x_0^2-x_1^2\]
+			Si ottiene:
+			\[\frac{1}{a^2}=\frac{det\Delta_{\frac{1}{a^2}}}{detA}=\frac{y_0^2-y_1^2}{x_1^2\cdot y_0^2-x_0^2\cdot y_1^2}\]
+			\[[\frac{1}{b^2}=\frac{det\Delta_{\frac{1}{b^2}}}{detA}=\frac{x_0^2-x_1^2}{x_1^2\cdot y_0^2-x_0^2\cdot y_1^2}\]
+			Da cui:
+			\[a=\sqrt{\frac{x_1^2\cdot y_0^2-x_0^2\cdot y_1^2}{y_0^2-y_1^2}}\]
+			\[b=\sqrt{\frac{x_1^2\cdot y_0^2-x_0^2\cdot y_1^2}{x_0^2-x_1^2}}\]
+			
+	\chapter{Il Triangolo}
+				\section{Triangolo individuato da tre punti}
+				Dati tre punti
+				$P_1\left(x_1,y_2\right)$, $P_2\left(x_2,y_2\right)$, $P_3\left(x_1,y_2\right)$ determinare il perimetro del triangolo individuato dai tre punti	
+				\\
+				\\
+				i tre punti non devono essere allineati, altrimenti non possono individuare un triangolo. i punti sono allineati se:
+				\[detA=det\begin{bmatrix}
+					x_1&y_1&1\\
+					x_2&y_2&1\\
+					x_3&y_3&1
+				\end{bmatrix}\]
+				nel caso i punti individuino un triangolo calcoliamo:
+				
+				\[P_1P_2=\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\] 
+				\[P_1P_3=\sqrt{(x_3-x_1)^2 + (y_3-y_1)^2}\] 
+				\[P_2P_3=\sqrt{(x_3-x_2)^2 + (y_3-y_2)^2}\] 
+				\\
+				si ha: \[2p =\overline{P_1P_2} +\overline{ P_1P_3}+\overline{P_2P_3}\] 
+				
+				\section{L'area del triangolo}
+				Dati tre punti
+				$P_1\left(x_1,y_2\right)$, $P_2\left(x_2,y_2\right)$, $P_3\left(x_1,y_2\right)$ determinare l'area del triangolo individuato dai tre punti	
+				\\
+				\\
+				dopo aver individuato il perimetro il valore dell'ara può essere calcolato con la formula di Erone:
+				\\
+				\[A=\sqrt{p(p-a)(p-b)(p-c)}\] 
+				dove:
+				\\
+				$a=P_1P_2$
+				\\
+				$b=P_1P_3$
+				\\
+				$c=P_2P_3$
+				\\ e p è il semiperimetro
+				\section{Baricentro}
+				Dati tre punti
+				$P_1\left(x_1,y_2\right)$, $P_2\left(x_2,y_2\right)$, $P_3\left(x_1,y_2\right)$ determinare il baricentro del triangolo individuato dai tre punti
+				\\	
+				il baricentro è il punto di intersezione delle mediane.
+				\\
+				\[G=\left(\frac{x_1+x_2+x_3}{3},\frac{y_1+y_2+y_3}{3}\right)\] 
+				\section{Ortocentro}
+				Dati tre punti
+				$P_1\left(x_1,y_2\right)$, $P_2\left(x_2,y_2\right)$, $P_3\left(x_1,y_2\right)$ determinare l'ortocentro del triangolo individuato dai tre punti
+				\\
+				\\
+				L'ortocentro è il punto di intersezione tra le tre altezze del triangolo. occorre quindi determinare almeno due altezze e determinarne l'intersezione.
+				\\
+				L'altezza è la retta $\perp$ ad un lato passante per il vertice opposto 
+				\\
+				\\
+				determiniamo $P_2H$
+				\\
+				\\
+				\[m_{P_1P_3}=\frac{y_3-y_1}{x_3-x_1}\]
+				\\
+				\[m\perp_{P_1P_3}=-\frac{1}{m_{P_1P_3}}\]
+				\\
+				\[y-y_2=m_{P_1P_3}(x-x_2)\]
+				\\
+				\[y=m_{P_1P_3}x+y_2-m_{P_1P_3}x_2\]
+				\\
+				\[m_1=m_{P_1P_3}\]
+				\\
+				\[q_1=y_2-m_{P_1P_3}x_2\]
+				\\
+				determiniamo $P_3K$
+				\\
+				\\
+				\[m_{P_1P_2}=\frac{y_2-y_1}{x_2-x_1}\]
+				\\
+				\[m\perp_{P_1P_2}=-\frac{1}{m_{P_1P_2}}\]
+				\\
+				\[y-y_3=m_{P_1P_2}(x-x_3)\]
+				\\
+				\[y=m_{P_1P_2}x+y_3-m_{P_1P_2}x_3\]
+				\\
+				\[m_2=m_{P_1P_2}\]
+				\\
+				\[q_2=y_3-m_{P_1P_2}x_3\]
+				\\
+				Dobbiamo ora trovare l'intersezione delle due rette:
+				\\
+				\[  \begin{cases}
+					y=m_1x+q_1\\
+					y=m_2x+q_2
+				\end{cases} \]
+				\\
+				risolviamo per confronto:
+				\\
+				\[m_1x+q_1=m_2x+q_2\]
+				\\
+				\[y_0=m_1x_0+q_1\]
+				\\
+				\[x_0=\frac{q_2-q_1}{m_1-m_2}\]
+				\section{Lunghezza mediana}
+				Determinare la lunghezza della mediana relativa al lato $\overline{AB}$
+				\\
+				\[M_{AB}=\left(\frac{x_A+x_b}{2},\frac{y_a-y_B}{2}\right)\] 
+				\\
+				\[x_M=\frac{x_A+x_B}{2}\]
+				\\
+				\[y_M=\frac{y_A+y_B}{2}\]
+				\\
+				\[d=\overline{CM}=\sqrt{(y_C-y_M)^2+(x_C-x_M)^2}\]
+				\section{Lunghezza altezza}
+				Determinare la lunghezza dell'altezza relativa al lato $\overline{AB}$ 
+				\\
+				\\
+				Determinare la retta HC:
+				\\
+				\[m_{AB}=\frac{y_B-y_0}{x_1}\]
+			
+
+
+
+
+
+
+
+
+
+
+\end{document}
