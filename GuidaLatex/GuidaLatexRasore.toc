@@ -1,0 +1,40 @@
+\contentsline {chapter}{\numberline {1}Introduzione}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Cos'è \LaTeX }{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Dove e perchè viene usato \LaTeX }{4}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Dove scaricare \LaTeX }{4}{section.1.3}%
+\contentsline {section}{\numberline {1.4}Come installare \LaTeX }{4}{section.1.4}%
+\contentsline {chapter}{\numberline {2}L'interfaccia di TeXstudio}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}I pannelli}{5}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Il pannello di testo}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Il pannello di output}{7}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Attrezzi e Scorciatoie}{8}{section.2.4}%
+\contentsline {chapter}{\numberline {3}Creare un nuovo documento}{9}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Le parti principali di un documento}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}La selezione dei pacchetti}{10}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}DocumentClass}{10}{subsection.4.1.1}%
+\contentsline {chapter}{\numberline {5}Organizzare un documento}{11}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Titolo}{11}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Capitoli, Sezioni e Paragrafi}{12}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Formattazione in più colonne}{13}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Elenchi puntati, numerati e personalizzati}{14}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Elenchi puntati}{14}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Elenchi numerati}{14}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}Elenchi personalizzati}{14}{subsection.5.4.3}%
+\contentsline {chapter}{\numberline {6}Le formule matematiche}{15}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Inizializzare una formula matematica}{15}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Inserire Modalità Matematica Inline:}{15}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Ambienti Matematici Avanzati:}{15}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Operatori e simboli matematici}{15}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Parentesi automatiche}{15}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Frazioni}{16}{subsection.6.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Apici e pedici}{16}{subsection.6.2.3}%
+\contentsline {subsection}{\numberline {6.2.4}Radicali}{16}{subsection.6.2.4}%
+\contentsline {subsection}{\numberline {6.2.5}Esponenziali}{16}{subsection.6.2.5}%
+\contentsline {subsection}{\numberline {6.2.6}Funzioni trigonometriche}{17}{subsection.6.2.6}%
+\contentsline {subsection}{\numberline {6.2.7}Sommatorie}{17}{subsection.6.2.7}%
+\contentsline {subsection}{\numberline {6.2.8}Integrali}{17}{subsection.6.2.8}%
+\contentsline {subsection}{\numberline {6.2.9}I Limiti}{18}{subsection.6.2.9}%
+\contentsline {subsection}{\numberline {6.2.10}Le lettere greche}{19}{subsection.6.2.10}%
+\contentsline {section}{\numberline {6.3}I Sistemi}{20}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Le Matrici}{20}{section.6.4}%
+\contentsline {section}{\numberline {6.5}Le Tabelle}{20}{section.6.5}%

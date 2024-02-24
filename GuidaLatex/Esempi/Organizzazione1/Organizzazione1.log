@@ -1,0 +1,93 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.10) (preloaded format=pdflatex 2023.11.1)  9 JAN 2024 19:03
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**./Organizzazione1.tex
+(Organizzazione1.tex
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-08-29>
+
+(C:\Users\Fabrizio Rasore\AppData\Local\Programs\MiKTeX\tex/latex/base\book.cls
+Document Class: book 2023/05/17 v1.4n Standard LaTeX document class
+
+(C:\Users\Fabrizio Rasore\AppData\Local\Programs\MiKTeX\tex/latex/base\bk10.clo
+File: bk10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@chapter=\count186
+\c@section=\count187
+\c@subsection=\count188
+\c@subsubsection=\count189
+\c@paragraph=\count190
+\c@subparagraph=\count191
+\c@figure=\count192
+\c@table=\count193
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen140
+)
+(C:\Users\Fabrizio Rasore\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3b
+ackend-pdftex.def
+File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count194
+\l__pdf_internal_box=\box51
+) (Organizzazione1.aux)
+\openout1 = `Organizzazione1.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 2.
+LaTeX Font Info:    ... okay on input line 2.
+ [1
+
+
+{C:/Users/Fabrizio Rasore/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}] [2
+]
+Chapter 1.
+[3
+
+] [4
+
+]
+Chapter 2.
+[5] [6
+
+] [7] [8]
+Chapter 3.
+[9
+
+] (Organizzazione1.aux)
+ ***********
+LaTeX2e <2023-06-01> patch level 1
+L3 programming layer <2023-08-29>
+ ***********
+ ) 
+Here is how much of TeX's memory you used:
+ 464 strings out of 475247
+ 8925 string characters out of 5753036
+ 1918785 words of memory out of 5000000
+ 22066 multiletter control sequences out of 15000+600000
+ 560853 words of font info for 45 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 35i,5n,50p,152b,151s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Users/Fabrizio Rasore/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmbx10.pfb><C:/Users/Fabrizio Rasore/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Fabrizio Rasore/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Fabrizio Ra
+sore/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsl10.pfb>
+Output written on Organizzazione1.pdf (9 pages, 52476 bytes).
+PDF statistics:
+ 52 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+
